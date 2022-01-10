@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cancel your Reservation</title>
+    <link rel="stylesheet" href="/static/match.css" />
+</head>
+
+<style>
+    input[type="submit"] {
+        background-color:lightgreen;
+        border: green;
+        color: black;
+        font-size: large;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    select {
+        width: 175px;
+        padding: 5px 35px 5px 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        height: 34px;
+    }
+
+    input[type="text"] {
+        width: 200px;
+        padding: 12px 20px;
+        height: 34px;
+        box-sizing: border-box;
+    }
+</style>
+
+<body style="background-color: lightblue;">
+    <h1>Match with a Friend who has Similar Interests as You Here</h1>
+    
+    <form action="/aftermatch" method="post">
+        <h3>Enter Your Name:</h3>
+        <input name="name" placeholder="name" type="text" />
+        <h3>What is your favorite place to shop?</h3>
+        <input name="store" placeholder="store" type="text" />
+        <h3>What is your favorite hobby?</h3>
+        <input name="hobby" placeholder="hobby" type="text" />
+        <!-- select tags-->
+        <h3>Do you have any siblings?</h3>
+        <!-- <label for="times">Select the Time to Cancel:</label> -->
+        <select name="Siblings">
+            <option disable selected value="Siblings">Siblings</option>
+            <option value ="Yes">Yes</option>
+            <option value="No">No</option>
+        </select> 
+
+        <h3>Select which grade you are going into/are already in</h3>
+        <!-- <label for="times">Select the Time to Cancel:</label> -->
+        <select name="Grades">
+            <option disable selected value="Grades">Grades</option>
+            <option value= "6th" >6th Grade</option>
+            <option value= "7th" >7th Grade</option>
+            <option value= "8th">8th Grade</option>
+            <option value= "9th">9th Grade</option>
+            <option value= "10th">10th Grade</option>
+            <option value= "11th">11th Grade</option>
+            <option value= "12th">12th Grade</option>
+        </select> 
+        <!-- <label for="courts">Select the Court to Cancel:</label> -->
+        <h3>Select Which Language is your First Language:</h3>
+        <select name="Languages">
+            <option disable selected value="Languages">Languages</option>
+            <option value = "English "> English</option>
+            <option value= "Spanish">Spanish</option>
+            <option value= "Chinese"> Chinese</option>
+            <option value= "Cantonese"> Cantonese</option>
+            <option value= "Korean"> Korean</option>
+        </select> 
+        <h3>Select Which Sport is your Favorite:</h3>
+        <select name="Sports">
+            <option disable selected value="Sports">Sports</option>
+            <option value= "Tennis"> Tennis</option>
+            <option value= "Basketball">Basketball</option>
+            <option value= "Soccer"> Soccer</option>
+            <option value= "Pingpong"> Pingpong</option>
+            <option value= "Football"> Football</option>
+            <option value= "I do not like or play sports"> I don't like or play sports</option>
+        </select>
+        <h3>Select Which Subject is your Favorite:</h3>
+         <select name="Subjects">
+        <option disable selected value=" Subjects">Subjects</option>
+        <option value ="Spanish"> Spanish</option>
+        <option value ="Mandarin">Mandarin</option>
+        <option value ="Math"> Math</option>
+        <option value ="Physics"> Physics</option>
+        <option value ="Biology"> Biology</option>
+        <option value ="Chemistry"> Chemistry</option>
+         <option value ="Computer Science"> Computer Science</option>
+        <option value ="Theater"> Theater</option>
+        <option value ="TOK"> Theory of Knowledge</option>
+        <option value ="English"> English</option>
+        <option value ="EnvironmentalScience"> Environmental Science</option>
+        <option value ="Psychology"> Pyschology </option>
+        <option value ="Economics"> Economics </option>
+        </select> 
+
+        <!-- <label for="name">Enter your name:</label> -->
+    
+        <div>
+            </br>
+            <input type="submit" value="Submit my Information" />
+        </div>
+    </form>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    {% for message in messages %}
+    <h2>{{ message }}</h2>
+    {% endfor %}
+    {% endif %} {% endwith %}
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+
+</html>

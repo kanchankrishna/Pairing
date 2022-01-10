@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <title>Friends with Matching Interests</title>
+ <!-- <link rel="stylesheet" href="/static/list.css" /> -->
+  <body>
+   <!--- <h1> Friends with Matching Interests</h1> -->
+    <a href="/">Go back to home page</a>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+    
+      td,
+      th {
+        border: 1px solid darkgreen;
+        text-align: left;
+        padding: 8px;
+        background: lightyellow;
+      }
+    
+      tr:nth-child(even) {
+        background-color:lightpink;
+      }
+    </style>
+    <br/>
+    <br/>
+    {% if nothingmatched == "true" %}
+        <h1>Sorry, we did not find any friends with any matching interests.  Below is the list of all the friends in your community:</h1>
+    {% else %}
+        <h1>Below is the list of friends that match some of your interests:</h1>
+    {% endif %}
+   
+    <table border="1">
+ 
+        <th>Name</th>
+        <th>Store</th>
+        <th>Hobby</th>
+        <th>Languages</th>
+        <th>Siblings</th>
+        <th>Sports</th>
+        <th>Subjects</th>
+        <th>Grades</th>
+      </thead>
+
+      {% for row in rows %}
+      <tr>
+        <td>{{row["name"]}}</td>
+        <td>{{row["Store"]}}</td>
+        <td>{{row["Hobby"]}}</td>
+        <td>{{row["Languages"]}}</td>
+        <td>{{row["Siblings"]}}</td>
+        <td>{{row["Sports"]}}</td>
+        <td>{{row["Subjects"]}}</td>
+        <td>{{row["Grades"]}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    
+  </body>
+</html>
